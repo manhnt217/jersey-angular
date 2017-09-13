@@ -1,0 +1,42 @@
+<div class="mt-2 card card-block">
+  <form action="" (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="row">
+      <div class="form-group col-5" [class.has-danger]="backlogID.invalid && (backlogID.dirty || backlogID.touched)">
+        <label for="">Backlog ID</label><input #backlogID="ngModel" type="text" class="form-control" required [(ngModel)]="report.backlogID" name="backlogID">
+      </div>
+      <div class="form-group col-7" [class.has-danger]="backlogName.invalid && (backlogName.dirty || backlogName.touched)">
+        <label for="">Backlog Name</label><input #backlogName="ngModel" type="text" class="form-control" required [(ngModel)]="report.backlogName" name="backlogName">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-5" [class.has-danger]="taskID.invalid && (taskID.dirty || taskID.touched)">
+        <label for="">Task ID</label><input #taskID="ngModel" type="text" class="form-control" required [(ngModel)]="report.taskID" name="taskID">
+      </div>
+      <div class="form-group col-7" [class.has-danger]="taskName.invalid && (taskName.dirty || taskName.touched)">
+        <label for="">Task Name</label><input #taskName="ngModel" type="text" class="form-control" required [(ngModel)]="report.taskName" name="taskName">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-5" [class.has-danger]="status.invalid && (status.dirty || status.touched)">
+        <label for="">Status</label><input #status="ngModel" type="text" class="form-control" required [(ngModel)]="report.status" name="status">
+      </div>
+      <div class="form-group col-7" [class.has-danger]="reporter.invalid && (reporter.dirty || reporter.touched)">
+        <label for="">Reporter</label><input #reporter="ngModel" type="text" class="form-control" required [(ngModel)]="report.reporter" name="reporter">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col" [class.has-danger]="startedDate.invalid && (startedDate.dirty || startedDate.touched)">
+        <label for="">Started Date</label><input #startedDate="ngModel" type="date" class="form-control" required [(ngModel)]="report.startedDate" name="startedDate">
+      </div>
+      <div class="form-group col" [class.has-danger]="endDate.invalid && (endDate.dirty || endDate.touched)">
+        <label for="">Completion Date</label><input #endDate="ngModel" type="date" class="form-control" required [(ngModel)]="report.endDate" name="endDate">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col">
+        <label for="">Issue</label><textarea #issue="ngModel" class="form-control" [(ngModel)]="report.issue" name="issue"></textarea>
+      </div>
+    </div>
+    <input class="btn btn-success" type="submit" value="Submit">
+  </form>
+</div>
