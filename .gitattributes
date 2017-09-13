@@ -1,0 +1,41 @@
+# General text file
+*.properties text=false
+*.json text=false
+*.conf text=false
+*.config text=false
+*.cfg text=false
+*.txt text=false
+*.template text=false
+*.MF text=false
+*.Manifest text=false
+.classpath text=false
+.gitignore text=false
+.project text=false
+
+
+# Programming language
+*.java text=false
+*.cs text=false
+*.php text=false
+*.pl text=false
+*.py text=false
+*.go text=false
+*.rb text=false
+*.c text=false
+*.h text=false
+*.scala text=false
+*.xml text=false
+*.xsd text=false
+*.yaml text=false
+*.html text=false
+*.css text=false
+*.sass text=false
+*.scss text=false
+*.js text=false
+
+
+# Binary file
+*.jar binary
+*.class binary
+*.png binary
+*.jpg binary
