@@ -27,3 +27,6 @@ target
 report
 node_modules
 bower_components
+
+src/main/ng-app/src/app/okta/
+*okta*

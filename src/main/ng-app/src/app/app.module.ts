@@ -7,10 +7,13 @@ import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from './home/home.component';
 import { AppComponent } from "./app.component";
 import { ReportViewComponent } from "./daily-report/report-view/report-view.component";
+import { OktaFormComponent } from "./okta/okta-form/okta-form.component";
+import { OktaModule } from "./okta/okta.module";
 
 const routes: Routes = [
   { path: 'report', component: ReportComponent },
   { path: 'report/view', component: ReportViewComponent },
+  { path: 'okta', component: OktaFormComponent },
   { path: '', component: HomeComponent }
 ];
 
@@ -19,7 +22,7 @@ const routes: Routes = [
     AppComponent,
     HomeComponent],
   imports: [
-    BrowserModule, DailyReportModule, RouterModule.forRoot(routes, { useHash: true })
+    BrowserModule, DailyReportModule, OktaModule, RouterModule.forRoot(routes, { useHash: true })
   ],
   providers: [],
   bootstrap: [AppComponent]
