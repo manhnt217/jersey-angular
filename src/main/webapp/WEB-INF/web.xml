@@ -10,6 +10,7 @@
 			<param-value>com.example.jersey_sample</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
+		<async-supported>true</async-supported>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Jersey REST Service</servlet-name>
@@ -23,6 +24,7 @@
 			<param-name>allowedMethods</param-name>
 			<param-value>POST, GET, OPTIONS, DELETE, PUT, PATCH, HEAD</param-value>
 		</init-param>
+		<async-supported>true</async-supported>
 	</filter>
 	<filter-mapping>
 		<filter-name>cross-origin</filter-name>

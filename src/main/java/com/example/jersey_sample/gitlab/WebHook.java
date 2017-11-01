@@ -1,9 +1,9 @@
 package com.example.jersey_sample.gitlab;
 
+import com.example.jersey_sample.gitlab.sse.MessageEndpoint;
+
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
-
-import static com.example.jersey_sample.Log.GITLAB_LOG;
 
 /**
  * @author manhnt
@@ -11,8 +11,8 @@ import static com.example.jersey_sample.Log.GITLAB_LOG;
 public class WebHook {
 
 	@POST
-	@Path("/push")
+	@Path("/gitlab/hook")
 	public void pushEventHook(String body) {
-		GITLAB_LOG.warn("Body: " + body);
+		MessageEndpoint.broadcastMessage(body);
 	}
 }
