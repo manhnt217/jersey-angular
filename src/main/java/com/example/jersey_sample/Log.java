@@ -8,5 +8,6 @@ import org.slf4j.LoggerFactory;
  */
 public class Log {
 	public static final Logger REPORT_LOG = LoggerFactory.getLogger("app.report");
+	public static final Logger GITLAB_LOG = LoggerFactory.getLogger("app.gitlab");
 
 }
