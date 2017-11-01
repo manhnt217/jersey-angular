@@ -22,8 +22,7 @@ import java.util.stream.Stream;
 
 @Path("/report")
 public class DailyReport {
-	
-	private static java.nio.file.Path todayFile = getReportFile(null);
+
 	private HashMap<String, String> success = new HashMap<String, String>() {{
 		put("message", "success");
 	}};
@@ -52,6 +51,7 @@ public class DailyReport {
 	) {
 		try {
 			int nextId = 1;
+			java.nio.file.Path todayFile = getReportFile(null);
 			try {
 				nextId = Files.readAllLines(todayFile, Charset.forName("UTF-8")).size() + 1;
 			} catch (IOException e) {
