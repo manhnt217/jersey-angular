@@ -1,6 +1,4 @@
-package com.example.jersey_sample.gitlab;
-
-import com.example.jersey_sample.gitlab.sse.MessageEndpoint;
+package com.example.jersey_sample.service.gitlab;
 
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;

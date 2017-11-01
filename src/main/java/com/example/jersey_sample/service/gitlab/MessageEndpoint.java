@@ -1,4 +1,4 @@
-package com.example.jersey_sample.gitlab.sse;
+package com.example.jersey_sample.service.gitlab;
 
 import org.glassfish.jersey.media.sse.EventOutput;
 import org.glassfish.jersey.media.sse.OutboundEvent;
